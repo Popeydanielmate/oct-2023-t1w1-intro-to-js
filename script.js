@@ -1,4 +1,6 @@
-let exampleEmptyVariable = null;
+function exampleStuff(){
+
+    let exampleEmptyVariable = null;
 let anotherEmptyVariable = undefined;
 
 console.log(exampleEmptyVariable, anotherEmptyVariable);
@@ -83,3 +85,48 @@ if (weather == "sunny") {
 } else {
     console.log("Crazy weather, am I right?");
 }
+
+}
+
+let pokemonTeam = [
+    "pikachu",
+    "squirtle",
+    "charmander",
+    "mew",
+];
+
+function logTheTeam () {
+    sortedTeam = pokemonTeam.sort();
+
+    sortedTeam.forEach((pokemon, arrayIndex) => {
+        console.log(pokemon + "is at index of " + arrayIndex);
+    });
+
+
+    let [firstPokemon, ...otherPokemon] = sortedTeam;
+
+    console.log(firstPokemon);
+    console.log(otherPokemon);
+
+    while(sortedTeam.length){
+        console.log(sortedTeam.pop()); 
+    }
+
+  
+}
+
+//logTheTeam();
+
+
+
+const logTheTeamAlternate = (targetSize = 4) => {
+    if (pokemonTeam.length == targetSize){
+        console.log("There are " + targetSize + " Pokemon in the team.");
+    }
+
+    if (pokemonTeam.length === targetSize){
+        console.log("There are " + targetSize + " Pokemon in the team. This is from the strict comparison operator.");
+    }
+}
+logTheTeamAlternate();
+logTheTeamAlternate(2);
