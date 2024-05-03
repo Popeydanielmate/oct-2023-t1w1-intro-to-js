@@ -130,3 +130,37 @@ const logTheTeamAlternate = (targetSize = 4) => {
 }
 logTheTeamAlternate();
 logTheTeamAlternate(2);
+
+let person = {
+    name: "Alex",
+    greeting: (message) => {
+        console.log("Hello, I have a message for you: ");
+        console.log(message);
+    },
+    farewell: function (message) {
+        console.log("Bye bye, here are some parting words: ");
+        console.log(message);
+    },
+    dance: (dance) => {
+        console.log("I'm gonna dance!");
+        person.dance();
+    },
+    listFavouritePokemon: (pokemonList, formatFunction) => {
+        console.log("Hi, I have some favourite Pokemon to share. They are: ");
+        formatFunction(pokemonList);
+    }
+}
+
+function improvedTeamLogging(pokemonTeam) {
+    let sortedReversedTeam = pokemonTeam.sort().reverse();
+    
+    sortedReversedTeam.forEach(pokemonName => {
+        console.log(pokemonName);
+    })
+}
+
+person.listFavouritePokemon(["Pikachu", "Blastoise"], improvedTeamLogging)
+
+//person.greeting("message");
+
+//person.farewell("message");
