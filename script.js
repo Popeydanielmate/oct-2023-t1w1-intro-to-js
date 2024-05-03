@@ -159,7 +159,7 @@ function improvedTeamLogging(pokemonTeam) {
     })
 }
 
-person.listFavouritePokemon(["Pikachu", "Blastoise"], improvedTeamLogging)
+person.listFavouritePokemon(["Pikachu", "Blastoise"], improvedTeamLogging);
 
 //person.greeting("message");
 
